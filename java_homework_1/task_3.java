@@ -1,7 +1,7 @@
 package java_homework_1;
 
 /**
- * task3
+ * task3    
  * Реализовать простой калькулятор
  */
 
@@ -10,15 +10,17 @@ import java.util.Scanner;
 public class task_3 {
     
     static int scanNumber() {
-        Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
-        return number;
+        try (Scanner scan = new Scanner(System.in)) {
+            int number = scan.nextInt();
+            return number;
+        }
         
     }
     static String scanOperations() {
-        Scanner scan = new Scanner(System.in);
-        String operations = scan.nextLine();
-        return operations;
+        try (Scanner scan = new Scanner(System.in)) {
+            String operations = scan.nextLine();
+            return operations;
+        }
 
     }
     static int getResult(String opr, int num1, int num2) {
